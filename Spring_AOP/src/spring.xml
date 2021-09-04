@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+
+
+
+<aop:aspectj-autoproxy />
+
+<bean id="university" class="in.happycoding.bean.University">
+
+</bean>
+
+
+<bean id="notificationservice" class="in.happycoding.aspect.NotificationService">
+
+</bean>
+
+
+<bean id="logservices" class="in.happycoding.aspect.LogServices">
+
+</bean>
+
+<bean id="bank" class="in.happycoding.bean.Bank">
+
+</bean>
+
+</beans>
