@@ -1,0 +1,113 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+
+<bean id="hdd5" class="in.happycoding.bean.HDD">
+
+<constructor-arg name="prodId" value="111"/>
+<constructor-arg name="capacity" value="10"/> 
+
+</bean>
+
+<!-- 	This is Setter Injection   -->
+
+<bean id="laptop5" class="in.happycoding.bean.Laptop">
+
+<property name="company" value="Avita" />
+<property name="ram" value="400" />
+<property name="hdd" ref="hdd5" />
+
+</bean>
+
+
+
+
+
+
+	<bean id="hdd" class="in.happycoding.bean.HDD">
+	
+	<constructor-arg name="prodId" value="1"/>
+	<constructor-arg name="capacity" value="8"/>
+		
+	</bean>
+
+<bean id="laptop" class="in.happycoding.bean.Laptop">
+
+<constructor-arg name="company" value="Avita"/>
+<constructor-arg name="ram" value="10"/>
+<constructor-arg name="hdd" ref="hdd"/>
+
+</bean>
+
+
+
+
+
+<bean id="hdd1" class="in.happycoding.bean.HDD">
+	
+	<constructor-arg name="prodId" value="2"/>
+	<constructor-arg name="capacity" value="4"/>
+		
+	</bean>
+
+
+<bean id="laptop1" class="in.happycoding.bean.Laptop">
+
+<constructor-arg name="company" value="hp"/>
+<constructor-arg name="ram" value="101"/>
+<constructor-arg name="hdd" ref="hdd1"/>
+
+</bean>
+
+
+
+
+<bean id="hdd2" class="in.happycoding.bean.HDD">
+	
+	<constructor-arg name="prodId" value="3"/>
+	<constructor-arg name="capacity" value="6"/>
+		
+	</bean>
+
+
+<bean id="laptop2" class="in.happycoding.bean.Laptop">
+
+<constructor-arg name="company" value="dell"/>
+<constructor-arg name="ram" value="10"/>
+<constructor-arg name="hdd" ref="hdd2"/>
+
+</bean>
+
+
+
+
+
+<bean id="hdd3" class="in.happycoding.bean.HDD">
+	
+	<constructor-arg name="prodId" value="31"/>
+	<constructor-arg name="capacity" value="61"/>
+		
+	</bean>
+
+
+<bean id="laptop3" class="in.happycoding.bean.Laptop">
+
+<constructor-arg name="company" value="dell"/>
+<constructor-arg name="ram" value="101"/>
+<constructor-arg name="hdd" ref="hdd3"/>
+
+</bean>
+
+
+
+
+
+
+</beans>

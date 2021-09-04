@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+  
+
+
+<bean id="engine" class="in.happycoding.bean.Engine">
+
+<constructor-arg name="id" value="123"/>
+<constructor-arg name="make" value="TATA"/> 
+
+</bean>
+
+<!-- 	This is Constructor Injection   -->
+<bean id="car" class="in.happycoding.bean.Car">
+<constructor-arg name="id" value="50"/>
+<constructor-arg name="company" value="Audi"/>
+<constructor-arg name="engine" ref="engine"/>
+</bean>
+
+<!-- 	Constructor Injection End -->
+
+<bean id="engine2" class="in.happycoding.bean.Engine">
+
+<constructor-arg name="id" value="111"/>
+<constructor-arg name="make" value="Toyota"/> 
+
+</bean>
+
+<!-- 	This is Setter Injection   -->
+
+<bean id="car2" class="in.happycoding.bean.Car">
+
+<property name="id" value="101" />
+<property name="company" value="Mahindra" />
+<property name="engine" ref="engine2" />
+
+</bean>
+<!-- 	Setter Injection End -->
+
+</beans>  
